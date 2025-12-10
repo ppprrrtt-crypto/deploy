@@ -3,50 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מקרן חכם – דיל חם! | ExpressDeal</title>
-
-    <!-- Tailwind -->
+    <title>דיל אקספרס | מבצעים וקופונים AliExpress</title>
+    <!-- Tailwind CSS מינימלי דרך CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        body { font-family: "Inter", sans-serif; background:#f5f6fa; }
-        .cta-btn {
-            display:flex; align-items:center; justify-content:center;
-            padding:1rem; border-radius:12px; font-weight:bold;
-            transition:0.25s; text-align:center;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
         }
-        .cta-btn:hover { transform:scale(1.04); opacity:0.95; }
-        .ali-btn { background:#e84545; color:white; }
-        .wa-btn { background:#25D366; color:white; }
-        .tg-btn { background:#0088cc; color:white; }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            gap: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .telegram-btn {
+            background-color: #0088cc;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+
+        .ai-btn {
+            background-color: #7e22ce;
+            color: white;
+            box-shadow: 0 4px 15px rgba(126, 34, 206, 0.4);
+        }
+
+        .pulse {
+            animation: pulse-ring 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
     </style>
 </head>
-
 <body class="text-gray-900">
 
-<div class="max-w-xl mx-auto p-5">
+<div class="max-w-xl mx-auto p-4 md:p-8">
 
-    <!-- 🔥 בלוק מוצר -->
-    <section class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 mb-10 text-center">
-
-        <h1 class="text-3xl font-extrabold text-red-600 mb-4">
-            🎥 דיל חם! המקרן הוויראלי שהישראלים מזמינים עכשיו
+    <!-- כותרת ראשית -->
+    <header class="text-center mb-8 mt-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-red-600 mb-3">
+            חיסכון של עד 70% במבצעים הוויראליים של AliExpress!
         </h1>
+        <p class="text-xl md:text-2xl font-semibold text-gray-700">
+            קבוצת המבצעים הכי חמה ברשת – עדכונים מידיים על הדילים הפופולריים ביותר!
+        </p>
+    </header>
 
-        <!-- תמונה של המקרן -->
-        <img src="https://ae01.alicdn.com/kf/S7ef0a5015e2044a7be0e5e7fb02d72933.jpg"
-             class="rounded-xl shadow-md mx-auto mb-5 w-full"
-             alt="מקרן חכם 8K">
-
-        <h2 class="text-2xl font-bold mb-3">
-            Smart Home Projector – Google Assistant • Voice Control
-        </h2>
-
-        <p class="text-lg text-gray-700 mb-4">
-            מחיר ירד עכשיו – המלאי בדילים מוגבל ועלול להיעלם בכל רגע.
+    <!-- CTA מרכזי -->
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-indigo-500/50 mb-10 text-center">
+        <p class="text-2xl font-bold mb-6 text-gray-800">
+            בחר את ערוץ העדכונים המועדף עליך:
         </p>
 
-        <!-- כפתור לדיל -->
-        <a href="https://s.click.aliexpress.com/e/_c3Kwqgdn"
-           target
+        <!-- וואטסאפ -->
+        <a href="https://chat.whatsapp.com/G4lnGmBM1pH8YZLo4DhvdX?mode=hqrt3"
+           target="_blank"
+           class="cta-btn whatsapp-btn pulse text-2xl mb-4">
+            <i class="fa-brands fa-whatsapp text-3xl"></i> הצטרפו לווצאפ (עדכונים מיידיים!)
+        </a>
+        <p class="text-sm text-gray-600 mb-6">
+            *מספר המקומות בקבוצה מוגבל – מתמלא מהר!
+        </p>
+
+        <!-- טלגרם -->
+        <a href="https://t.me/dealexpressil0"
+           target="_blank"
+           class="cta-btn telegram-btn text-2xl mb-4">
+            <i class="fa-brands fa-telegram text-3xl"></i> הצטרפו לטלגרם (למי שמעדיף שקט)
+        </a>
+
+        <!-- מוצר ויראלי -->
+        <a href="https://s.click.aliexpress.com/e/_c3uIXfAt"
+           target="_blank"
+           class="cta-btn ai-btn text-xl flex items-center justify-center mb-0">
+            גלו מוצר ויראלי סודי עכשיו!
+        </a>
+    </div>
+
+    <!-- יתרונות למשתמש -->
+    <section class="mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-5 text-indigo-600">
+            מה תקבלו כחברי דיל אקספרס?
+        </h2>
+        <ul class="space-y-4 text-lg md:text-xl text-gray-700 bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+            <li class="flex items-start">
+                <span class="text-green-500 font-extrabold text-2xl ml-3 mt-[-2px]">💰</span>
+                <p><span class="font-bold">דילים ששורפים את הרשת:</span> מוצרים פופולריים בהנחות ענק שלא תמצאו לבד.</p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-red-500 font-extrabold text-2xl ml-3 mt-[-2px]">🔥</span>
+                <p><span class="font-bold">מוצרים ויראליים:</span> עדכון מיידי על המוצרים הכי טרנדיים ברשת.</p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-blue-500 font-extrabold text-2xl ml-3 mt-[-2px]">🚀</span>
+                <p><span class="font-bold">לפני כולם:</span> גישה ראשונית לקופונים סודיים ומבצעי פלאש.</p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-purple-500 font-extrabold text-2xl ml-3 mt-[-2px]">💯</span>
+                <p><span class="font-bold">איכות מובטחת:</span> רק מוצרים שנבדקו ונמצאו עם ציון גבוה.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- אמון -->
+    <section class="text-center bg-gray-100 p-5 rounded-xl border border-gray-300 mb-10">
+        <p class="text-xl font-semibold text-gray-700">
+            <span class="text-3xl font-extrabold text-indigo-700 block mb-1">מעל 5,000</span>
+            ישראלים כבר חוסכים מאות שקלים בחודש דרך <span class="font-bold">דיל אקספרס</span>!
+        </p>
+    </section>
+
+    <!-- CTA בתחתית -->
+    <div class="text-center">
+        <a href="https://chat.whatsapp.com/G4lnGmBM1pH8YZLo4DhvdX?mode=hqrt3"
+           target="_blank"
+           class="cta-btn whatsapp-btn text-xl mb-4">
+            <i class="fa-brands fa-whatsapp text-2xl"></i> לחצו כאן להצטרפות מיידית לווצאפ של דיל אקספרס!
+        </a>
+        <p class="text-xs text-gray-500 mt-4">
+            עלי אקספרס, WhatsApp וטלגרם הן סימנים מסחריים רשומים של בעליהן. דף זה אינו מקושר אליהן.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

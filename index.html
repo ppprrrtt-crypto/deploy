@@ -11,17 +11,25 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
+<style>
     body {
         font-family: 'Inter', sans-serif;
         margin: 0;
-        background: linear-gradient(135deg, #1e3a8a, #3b82f6, #9333ea);
-        background-size: 300% 300%;
-        animation: gradientMove 12s ease infinite;
-        color: #fff;
+
+        /* רקע RGB עדין */
+        background: linear-gradient(
+            135deg,
+            rgba(255, 120, 120, 0.25),
+            rgba(120, 140, 255, 0.25),
+            rgba(120, 255, 180, 0.25)
+        );
+        background-size: 180% 180%;
+        animation: softMove 12s ease-in-out infinite;
+
+        color: #111;
     }
 
-    @keyframes gradientMove {
+    @keyframes softMove {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }

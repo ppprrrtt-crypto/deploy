@@ -11,16 +11,14 @@
 
   <div class="max-w-md w-full px-6 text-center">
 
-    <!-- LOGO / NAME -->
-<div class="mb-6 flex justify-center">
-  <div class="p-1 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.8)]">
-    <img src="logo.png"
-         alt="דיל אקספרס"
-         class="w-24 h-24 rounded-full object-contain bg-purple-800">
-  </div>
-</div>
-
-
+    <!-- LOGO -->
+    <div class="mb-6 flex justify-center">
+      <div class="p-1 rounded-full bg-yellow-400 shadow-[0_0_25px_rgba(250,204,21,0.8)]">
+        <img src="logo.png"
+             alt="דיל אקספרס"
+             class="w-24 h-24 rounded-full object-contain bg-purple-800">
+      </div>
+    </div>
 
     <!-- MAIN TEXT -->
     <h1 class="text-2xl font-extrabold mb-4">
@@ -28,7 +26,7 @@
     </h1>
 
     <p class="text-base leading-relaxed mb-4">
-      על מוצרים שאתם קונים גם ככה.<br>
+      על מוצרים שאתם קונים יקר בארץ.<br>
       ב־AliExpress יש דילים מטורפים –<br>
       רוב האנשים פשוט לא רואים אותם בזמן.
     </p>
@@ -37,19 +35,41 @@
       “דיל אקספרס”
     </p>
 
+    <!-- UPDATED COMMUNITY TEXT -->
     <p class="text-sm mb-6 opacity-90">
-      ערוץ טלגרם עם דילים אמיתיים,<br>
-      קופונים עובדים ובלי ספאם.
+      קהילת דילים סגורה<br>
+      עם המלצות אמיתיות, בלי ספאם ובלי חארטות.
     </p>
 
-    <!-- CTA -->
-    <a href="PUT_TELEGRAM_LINK_HERE"
-       class="inline-block bg-lime-400 text-black font-extrabold px-6 py-3 rounded-full text-lg shadow-lg hover:bg-lime-300 transition">
-      להצטרפות לערוץ הטלגרם ←
-    </a>
+    <!-- CTA BUTTONS SIDE BY SIDE -->
+    <div class="grid grid-cols-2 gap-3 mb-6">
+
+      <!-- Telegram -->
+      <a href="PUT_TELEGRAM_LINK_HERE"
+         class="flex flex-col items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-4 text-sm shadow-lg transition active:scale-95">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24">
+          <path d="M9.993 15.674 9.59 19.32c.575 0 .824-.247 1.123-.544l2.696-2.56 5.59 4.085c1.025.566 1.76.268 2.016-.95L24 1.433l-24 9.26 6.144 1.915 14.26-8.992c.672-.408 1.285-.184.78.224"/>
+        </svg>
+
+        טלגרם
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="PUT_WHATSAPP_LINK_HERE"
+         class="flex flex-col items-center justify-center gap-2 bg-lime-400 hover:bg-lime-300 text-black font-extrabold py-4 text-sm shadow-lg transition active:scale-95">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-black" viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.91 11.91 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.11.55 4.18 1.6 6.01L0 24l6.15-1.6A11.94 11.94 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.2-3.48-8.52z"/>
+        </svg>
+
+        וואטסאפ
+      </a>
+
+    </div>
 
     <!-- BENEFITS -->
-    <div class="mt-8 text-right text-sm space-y-2">
+    <div class="mt-6 text-right text-sm space-y-2">
       <div>✔ מוצרים שעברו סינון</div>
       <div>✔ מחירים נמוכים יותר מהרגיל</div>
       <div>✔ דילים שעולים ונעלמים מהר</div>

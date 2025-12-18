@@ -27,7 +27,6 @@
       transform-origin: center;
     }
 
-    /* לא עוצרים במובייל */
     @media (hover: hover) {
       .cta-pulse:hover {
         animation-play-state: paused;
@@ -36,36 +35,36 @@
   </style>
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-[#0b0614] via-[#1e0033] to-[#3b0764] flex items-center justify-center text-white">
+<body class="min-h-screen bg-gradient-to-b from-[#fff7e6] via-[#fff1cc] to-[#ffe8a3] flex items-center justify-center text-gray-900">
 
   <div class="max-w-md w-full px-6 text-center">
 
     <!-- LOGO -->
     <div class="mb-6 flex justify-center">
-      <div class="p-1 rounded-full bg-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.9)]">
+      <div class="p-1 rounded-full bg-yellow-400 shadow-[0_0_30px_rgba(250,204,21,0.6)]">
         <img src="logo.png"
              alt="דיל אקספרס"
-             class="w-24 h-24 rounded-full object-contain bg-[#1e0033]">
+             class="w-24 h-24 rounded-full object-contain bg-white">
       </div>
     </div>
 
     <!-- MAIN TEXT -->
-    <h1 class="text-2xl font-extrabold mb-4 leading-tight">
+    <h1 class="text-2xl font-extrabold mb-4 leading-tight text-gray-900">
       הגיע הזמן להפסיק לשלם מחיר יקר<br>
       על מוצרים שאתם קונים בארץ<span>&lrm;!</span>
     </h1>
 
-    <p class="text-base leading-relaxed mb-4">
+    <p class="text-base leading-relaxed mb-4 text-gray-700">
       ב־AliExpress יש דילים מטורפים –<br>
       רוב האנשים פשוט לא רואים אותם בזמן.
     </p>
 
-    <p class="text-lg font-bold text-yellow-300 mb-4">
+    <p class="text-lg font-bold text-yellow-600 mb-4">
       “דיל אקספרס”
     </p>
 
     <!-- COMMUNITY TEXT -->
-    <p class="text-sm mb-6 opacity-90">
+    <p class="text-sm mb-6 text-gray-600">
       קהילת דילים סגורה<br>
       עם המלצות אמיתיות, בלי ספאם וחינמית לגמרי.
     </p>
@@ -73,18 +72,18 @@
     <!-- CTA BUTTONS -->
     <div class="grid grid-cols-2 gap-4 mb-6">
 
-      <!-- Telegram – Beer Color -->
+      <!-- Telegram -->
       <a href="https://t.me/dealexpressil0"
          class="cta-pulse flex flex-col items-center justify-center gap-3
-                bg-[#f59e0b] hover:bg-[#fbbf24] text-black
+                bg-blue-600 hover:bg-blue-700 text-white
                 font-extrabold py-6 text-base
                 rounded-2xl
-                shadow-[0_0_25px_rgba(245,158,11,0.7)]
-                hover:shadow-[0_0_45px_rgba(245,158,11,1)]
+                shadow-[0_0_20px_rgba(59,130,246,0.6)]
+                hover:shadow-[0_0_40px_rgba(59,130,246,0.9)]
                 transition-colors duration-200">
 
         <svg xmlns="http://www.w3.org/2000/svg"
-             class="w-8 h-8 fill-black"
+             class="w-8 h-8 fill-white"
              viewBox="0 0 24 24">
           <path d="M9.993 15.674 9.59 19.32c.575 0 .824-.247 1.123-.544l2.696-2.56 5.59 4.085c1.025.566 1.76.268 2.016-.95L24 1.433l-24 9.26 6.144 1.915 14.26-8.992c.672-.408 1.285-.184.78.224"/>
         </svg>
@@ -92,14 +91,14 @@
         לקבוצה בטלגרם
       </a>
 
-      <!-- WhatsApp – Beer Color -->
+      <!-- WhatsApp -->
       <a href="https://chat.whatsapp.com/G4lnGmBM1pH8YZLo4DhvdX?mode=hqrt3"
          class="cta-pulse flex flex-col items-center justify-center gap-3
-                bg-[#f59e0b] hover:bg-[#fbbf24] text-black
+                bg-lime-400 hover:bg-lime-300 text-black
                 font-extrabold py-6 text-base
                 rounded-2xl
-                shadow-[0_0_25px_rgba(245,158,11,0.7)]
-                hover:shadow-[0_0_45px_rgba(245,158,11,1)]
+                shadow-[0_0_20px_rgba(132,204,22,0.6)]
+                hover:shadow-[0_0_40px_rgba(132,204,22,0.9)]
                 transition-colors duration-200">
 
         <i class="fa-brands fa-whatsapp text-4xl"></i>
@@ -110,7 +109,7 @@
     </div>
 
     <!-- BENEFITS -->
-    <div class="mt-6 text-right text-sm space-y-2">
+    <div class="mt-6 text-right text-sm space-y-2 text-gray-700">
       <div>✔ מוצרים שעברו סינון</div>
       <div>✔ מחירים נמוכים יותר מהרגיל</div>
       <div>✔ דילים שעולים ונעלמים מהר</div>

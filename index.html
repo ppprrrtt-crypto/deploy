@@ -1,161 +1,122 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>דיל אקספרס | מבצעים וקופונים AliExpress</title>
+<style>
+    .rsvp-container {
+        max-width: 450px;
+        margin: 20px auto;
+        padding: 30px;
+        background-color: #fdfaf3; /* קרם בהיר בהתאם להזמנה */
+        border: 1px solid #e2d1a7; /* מסגרת זהובה עדינה */
+        font-family: 'Assistant', sans-serif;
+        direction: rtl;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    .rsvp-container h2 {
+        color: #b89c5a; /* זהב מההזמנה */
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
 
-    <!-- Inter Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap">
+    .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    .rsvp-form button {
+        background-color: #333; /* שחור/כהה כמו בטקסט השמות */
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+        transition: 0.3s;
+    }
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc;
-            margin: 0;
-        }
+    .rsvp-form button:hover {
+        background-color: #b89c5a;
+    }
 
-        .cta-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 12px;
-            font-weight: bold;
-            transition: .3s;
-            gap: 0.5rem;
-        }
+    #result {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        color: #4a7c44;
+        font-weight: bold;
+        font-size: 20px;
+    }
+</style>
 
-        .cta-btn:hover {
-            transform: scale(1.05);
-            opacity: 0.95;
-        }
-
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        }
-
-        .telegram-btn {
-            background-color: #0088cc;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
-        }
-
-        .ai-btn {
-            background-color: #7e22ce;
-            color: white;
-            box-shadow: 0 4px 15px rgba(126, 34, 206, 0.4);
-        }
-
-        .pulse {
-            animation: pulse-ring 1.5s infinite;
-        }
-
-        @keyframes pulse-ring {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(255,255,255,0); }
-            100% { transform: scale(0.95); }
-        }
-    </style>
-</head>
-
-<body class="text-gray-900">
-
-<div class="max-w-xl mx-auto p-4 md:p-8">
-
-    <!-- כותרת ראשית משופרת -->
-    <header class="text-center mb-8 mt-6">
-        <h1 class="text-4xl font-extrabold text-red-600 drop-shadow">
-            המבצעים הכי חמים של AliExpress!
-        </h1>
-
-        <p class="text-xl font-semibold text-gray-700 mt-3">
-            עדכונים בזמן אמת על הדילים שמתרוקנים מהר!
-        </p>
-    </header>
-
-    <!-- ריבוע מרכזי גדול -->
-    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-2xl border-4 border-indigo-500/50 mb-10 text-center">
+<div class="rsvp-container">
+    <div id="form-content">
+        <h2>אישור הגעה - פדיון הבן</h2>
+        <p>נשמח לראותכם בין אורחינו!</p>
         
-        <!-- מוצר ויראלי עבר לכאן -->
-        <a href="https://s.click.aliexpress.com/e/_c3uIXfAt"
-           target="_blank"
-           class="cta-btn ai-btn text-xl flex items-center justify-center mb-6 pulse">
-            🔥 מוצר ויראלי שכולם קונים עכשיו! 🔥
-        </a>
+        <form id="rsvp-form" action="https://api.web3forms.com/submit" method="POST" class="rsvp-form">
+            <input type="hidden" name="access_key" value="bedeadac-9a95-47b9-a298-61939aecc631">
+            
+            <input type="text" name="name" placeholder="שם מלא" required>
+            
+            <select name="attending" required>
+                <option value="" disabled selected>האם תגיעו?</option>
+                <option value="כן">כן, נגיע בשמחה!</option>
+                <option value="לא">לצערי לא נוכל להגיע</option>
+            </select>
 
-        <p class="text-2xl font-bold mb-6 text-gray-800">
-            בחר את ערוץ העדכונים המועדף עליך:
-        </p>
+            <input type="number" name="adults" placeholder="מספר מבוגרים" min="0">
+            <input type="number" name="children" placeholder="מספר ילדים" min="0">
+            
+            <textarea name="message" rows="3" placeholder="הערות (אלרגיות, צמחוני וכו')"></textarea>
 
-        <!-- וואטסאפ -->
-        <a href="https://chat.whatsapp.com/G4lnGmBM1pH8YZLo4DhvdX?mode=hqrt3"
-           target="_blank"
-           class="cta-btn whatsapp-btn text-2xl mb-4">
-            <i class="fa-brands fa-whatsapp text-3xl"></i> הצטרפו לווצאפ (עדכונים מיידיים!)
-        </a>
-        <p class="text-sm text-gray-600 mb-6">
-            *מספר המקומות מוגבל – מתמלא מהר!
-        </p>
-
-        <!-- טלגרם -->
-        <a href="https://t.me/dealexpressil0"
-           target="_blank"
-           class="cta-btn telegram-btn text-2xl mb-4">
-            <i class="fa-brands fa-telegram text-3xl"></i> הצטרפו לטלגרם         </a>
-
+            <button type="submit" id="submit-btn">שלח אישור</button>
+        </form>
     </div>
 
-    <!-- יתרונות למשתמש -->
-    <section class="mb-10">
-        <h2 class="text-2xl md:text-3xl font-bold text-center mb-5 text-indigo-600">
-            מה תקבלו כחברי דיל אקספרס?
-        </h2>
-        <ul class="space-y-4 text-lg md:text-xl text-gray-700 bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-            <li class="flex items-start">
-                <span class="text-green-500 text-2xl ml-3">💰</span>
-                <p><span class="font-bold">הנחות מטורפות:</span> מבצעים שלא תמצאו לבד.</p>
-            </li>
-            <li class="flex items-start">
-                <span class="text-red-500 text-2xl ml-3">🔥</span>
-                <p><span class="font-bold">מוצרים ויראליים:</span> מתעדכן כל רגע!</p>
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-500 text-2xl ml-3">🚀</span>
-                <p><span class="font-bold">הכי מהירים:</span> תפוס את המבצע לפני שהוא נעלם.</p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- אמון -->
-    <section class="text-center bg-gray-100 p-5 rounded-xl border border-gray-300 mb-10">
-        <p class="text-xl font-semibold text-gray-700">
-            <span class="text-3xl font-extrabold text-indigo-700 block mb-1">מעל 5,000</span>
-            ישראלים כבר חוסכים מאות שקלים בחודש 💸
-        </p>
-    </section>
-
-    <!-- CTA סופי -->
-    <div class="text-center">
-        <a href="https://chat.whatsapp.com/G4lnGmBM1pH8YZLo4DhvdX?mode=hqrt3"
-           target="_blank"
-           class="cta-btn whatsapp-btn text-xl mb-4">
-            <i class="fa-brands fa-whatsapp text-2xl"></i> הצטרפות מיידית לקבוצה!
-        </a>
-    </div>
-
+    <div id="result"></div>
 </div>
 
-</body>
-</html>
+<script>
+    const form = document.getElementById('rsvp-form');
+    const result = document.getElementById('result');
+    const formContent = document.getElementById('form-content');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "שולח אישור... נא להמתין";
+        result.style.display = "block";
+        formContent.style.display = "none";
+
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let resJson = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "תודה רבה! אישור ההגעה התקבל בהצלחה. נתראה בשמחה!";
+                } else {
+                    result.innerHTML = "חלה שגיאה: " + resJson.message;
+                    formContent.style.display = "block";
+                }
+            })
+            .catch(error => {
+                result.innerHTML = "משהו השתבש, אנא נסו שוב מאוחר יותר.";
+                formContent.style.display = "block";
+            });
+    });
+</script>
